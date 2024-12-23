@@ -469,12 +469,12 @@ body {
 
 .content-box {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Agar grid responsif */
+  grid-template-columns: repeat(2, 1fr); /* 2 kartu per baris */
   gap: 20px;
   width: 100%;
   max-width: 1200px; /* Batasi lebar maksimum */
-  margin: 0 auto;
-  margin-top: 20px;
+  margin: 0 auto; /* Pusatkan container */
+  margin-top: 30px;
 }
 .card {
   background: #fff;
