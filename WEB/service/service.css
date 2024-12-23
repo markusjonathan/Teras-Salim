@@ -441,9 +441,9 @@ body {
 }
 
 .service {
-  border: 50px solid #fff; /* Border putih */
+  border: 10px solid #fff; /* Border putih */
   background-color: #f9f5f2; /* Latar belakang border */
-  padding: 30px; /* Padding opsional agar konten memiliki ruang dari border */
+  padding: 20px; /* Padding agar lebih fleksibel */
   border-radius: 8px; /* Sesuaikan radius sesuai kebutuhan */
 }
 
@@ -456,39 +456,52 @@ body {
   background: #f9f5f2;
 }
 .wrapper h1 {
-  font-size: 3.5em;
-  margin: 25px;
+  font-size: 2.5em; /* Sesuaikan agar responsif */
+  margin: 20px auto;
+  text-align: center; /* Agar teks berada di tengah */
 }
+.wrapper p { 
+  text-align: center; /* Agar teks selalu di tengah */
+  margin: 0 auto;
+  max-width: 800px; /* Batas kanan dan kiri lebih jauh hanya pada layar besar */
+  line-height: 1.6; /* Menambah jarak antar baris agar lebih mudah dibaca */
+}
+
 .content-box {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 card per baris secara default */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Agar grid responsif */
   gap: 20px;
   width: 100%;
   max-width: 1200px; /* Batasi lebar maksimum */
-  margin: 0 auto; /* Pusatkan container */
-  margin-top: 30px;
+  margin: 0 auto;
+  margin-top: 20px;
 }
 .card {
   background: #fff;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 15px;
   text-align: center;
+  width: 100%;
 }
 .card i {
-  margin: 20px;
-  font-size: 60px;
+  margin: 15px;
+  font-size: 40px; /* Sesuaikan font icon */
   color: #581ed6;
 }
 .card h2 {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   font-weight: 400;
   text-align: center;
+  font-size: 1.2em; /* Ukuran font lebih kecil */
 }
 .card p {
   color: #6c757d;
   text-align: center;
+  font-size: 0.9em; /* Ukuran font paragraf lebih kecil */
 }
+
+/* Hover effects */
 .card:hover i,
 .card:hover p {
   color: #fff;
@@ -496,6 +509,9 @@ body {
 .card:hover h2 {
   font-weight: 600;
   color: #B40B08;
+}
+.card:hover {
+  background: linear-gradient(45deg, rgba(88, 70, 159, 0.7), rgba(136, 113, 199, 0.7));
 }
 .card:nth-child(1):hover {
   background: linear-gradient(
@@ -954,44 +970,35 @@ body {
 
 /* service */
 
-@media (max-width: 991px) {
-  .wrapper {
-    padding: 25px;
-  }
+@media (max-width: 600px) {
   .wrapper h1 {
-    font-size: 2.5em;
-    font-weight: 600;
+    font-size: 2em; /* Sesuaikan ukuran font */
   }
   .content-box {
-    flex-direction: column;
-    width: 100%;
+    grid-template-columns: 1fr; /* 1 kartu per baris untuk layar kecil */
   }
   .card {
-    min-width: 300px;
-    margin: 10px auto;
+    padding: 10px;
+  }
+  .card i {
+    font-size: 35px; /* Kurangi ukuran icon */
+  }
+  .card h2 {
+    font-size: 1em; /* Ukuran heading lebih kecil */
+  }
+  .card p {
+    font-size: 0.8em; /* Ukuran font paragraf lebih kecil */
   }
 }
 
-@media (max-width: 768px) { 
-  .card {
-    width: 100%;
-    margin: 10px 0;
+@media (max-width: 300px) {
+  .wrapper {
+    padding: 10px;
   }
-
-  #newsletter .button {
-      margin-top: 20px; 
-      text-align: center;
-  }
-
-  #newsletter .btn {
-      padding: 12px 24px; 
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-  }
-
-  .content-box {
-    grid-template-columns: 1fr;
+  .service {
+    padding: 10px;
+    border-width: 5px;
+    font-size: 0.8em; /* Font lebih kecil */
   }
 }
 
