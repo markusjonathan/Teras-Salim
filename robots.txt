@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /WEB/About.html
+Disallow: /WEB/service.html
+Disallow: /WEB/content.html
+Disallow: /WEB/Contact.html
+Disallow: /WEB/Blog_post/
+
+Allow: /WEB/home.html
+Allow: /
